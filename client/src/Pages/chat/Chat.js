@@ -47,6 +47,7 @@ const Chat = () => {
     useEffect(() => {
         if (!selectedUser) return;
 
+        
         const fetchMessages = async () => {
             try {
                 const res = await axios.get(

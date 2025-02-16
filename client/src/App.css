@@ -61,3 +61,44 @@
 ::-webkit-scrollbar {
   display: none; 
 }
+
+/* General navigation bar */
+nav {
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: sticky;
+  margin-bottom: 20px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+}
+
+/* Navigation buttons */
+nav button {
+  background: #2980b9; /* Blue theme for this page */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+nav button:hover {
+  background: #1f669a;
+  transform: scale(1.05);
+}
+
+/* Active button effect */
+nav button:active {
+  transform: scale(0.95);
+}

@@ -68,8 +68,7 @@ const PostShare = () => {
 
     return (
         <div className="PostShare">
-            <img src={user.profilePicture ? serverPublic + user.profilePicture : serverPublic + "defaultProfile.png"} alt="" />
-
+<img src={`http://localhost:5002/images/${user.profilePicture}`} alt={user.profilePicture}/>
             <div>
                 <input type="text" placeholder='Write a caption...' required ref={desc} />
 

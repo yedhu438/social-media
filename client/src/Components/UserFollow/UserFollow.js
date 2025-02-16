@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { followUser, unFollowUser } from '../../actions/UserAction';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -9,6 +10,7 @@ const UserFollow = ({ person }) => {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.authReducer.authData);
     const [following, setFollowing] = useState(person.followers.includes(user._id));
+    const navigate = useNavigate();
 
     const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
 
@@ -22,9 +24,10 @@ const UserFollow = ({ person }) => {
 
     return (
         <div className="follower">
-
             <div>
-                <img src={person.profilePicture ? serverPublic + person.profilePicture : serverPublic + "defaultProfile.png"} alt="" className='followerImg' />
+                <img src={`http://localhost:5002/images/${person.profilePicture}`} alt="" className='followerImg'
+                 onClick={() => navigate(`/profle/${person._id}`)} // Navigate on click
+                 style={{ cursor: "pointer" }} />
                 <div className="name">
                     <span>{person.firstname}</span>
                     <span>@{person.firstname}  {person.lastname}</span>

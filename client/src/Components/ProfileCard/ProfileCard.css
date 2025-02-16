@@ -5,8 +5,10 @@
     position: relative;
     gap: 1rem;
     background: var(--cardColor);
-    overflow-x: clip;   
+    overflow-x: clip;  
+    width: 300px; 
 }
+
 
 .ProfileImages {
     position: relative;
@@ -14,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 17px;
 }
 
 .ProfileImages>img:nth-of-type(1) {

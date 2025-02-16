@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Auth.css';
 import Logo from '../../Img/logo.png';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,6 +10,10 @@ const Auth = () => {
     const [isSignUp, setIsSignUp] = useState(true);
     const dispatch = useDispatch();
     const loading = useSelector((state) => state.authReducer.loading);
+
+    useEffect(() => {
+        dispatch({ type: "AUTH_FAIL" });  // Ensures loading is reset if stuck
+    }, [dispatch]);
 
     const [data, setData] = useState({ firstname: "", lastname: "", email: "", password: "", confirmpass: "" });
 

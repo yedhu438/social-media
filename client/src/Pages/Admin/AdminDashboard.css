@@ -1,0 +1,123 @@
+/* General layout */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevents overflow on the whole page */
+}
+
+/* Sidebar styles */
+.admin-sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    background: #34495e;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar-menu li:hover, .sidebar-menu .active {
+    background: #1abc9c;
+}
+
+/* Main content - Enable scrolling */
+.admin-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling */
+    height: 100vh; /* Full height */
+}
+
+/* Users and posts sections */
+.user-list, .post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Fix user card layout */
+.user-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack elements */
+    align-items: center;
+    width: 250px;
+    text-align: center; /* Center text */
+    position: relative;
+}
+
+/* User avatar */
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Delete button fix */
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Space from content */
+    width: 80%;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Fix post layout */
+.post-carrd {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.post-likes {
+    margin-top: 10px;
+}

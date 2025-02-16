@@ -1,0 +1,138 @@
+.chat-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.user-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin: 5px 0;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    color: #000;
+    border-bottom-right-radius: 0;
+}
+
+.received {
+    align-self: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-left-radius: 0;
+}
+
+.timestamp {
+    font-size: 10px;
+    color: gray;
+    position: absolute;
+    bottom: -15px;
+    right: 5px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-input button {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.sharedPost {
+    max-width: 300px; /* Limits width */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background: #f1f1f1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sharedPost img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.sharedPost a {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.sharedPost a:hover {
+    text-decoration: underline;
+}

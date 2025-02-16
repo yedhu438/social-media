@@ -6,11 +6,12 @@ import Noti from '../../Img/noti.png';
 import Comment from '../../Img/comment.png';
 import TrendCard from '../TrendCard/TrendCard';
 import ShareModal from '../ShareModal/ShareModal';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const RightSide = () => {
 
     const [modalOpened, setModalOpened] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <div className='RightSide'>
@@ -22,7 +23,7 @@ const RightSide = () => {
 
                 <SettingsOutlinedIcon />
                 <img src={Noti} alt="" />
-                <img src={Comment} alt="" />
+                <img src={Comment} alt="" onClick={()=>navigate('/chat')}/>
             </div>
 
             <TrendCard />
